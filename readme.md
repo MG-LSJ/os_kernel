@@ -11,3 +11,9 @@ Features:
     - Terminl Shell
 
 > 5th sem mini project
+
+![console](./assets/console.jpg)
+
+![ppt](./assets/ppt.jpg)
+
+<video src="./assets/demo.webm" controls muted></video>
