@@ -23,6 +23,7 @@ aarch64-linux-gnu-gcc -std=c99 -ffreestanding -mgeneral-regs-only -c src/kernel/
 aarch64-linux-gnu-gcc -std=c99 -ffreestanding -mgeneral-regs-only -c src/kernel/process.c -o build/kernel/process.o -D__TARGET_QEMU__
 aarch64-linux-gnu-gcc -std=c99 -ffreestanding -mgeneral-regs-only -c src/kernel/syscall.c -o build/kernel/syscall.o -D__TARGET_QEMU__
 aarch64-linux-gnu-gcc -std=c99 -ffreestanding -mgeneral-regs-only -c src/kernel/lib.c -o build/kernel/lib.o -D__TARGET_QEMU__
+aarch64-linux-gnu-gcc -std=c99 -ffreestanding -mgeneral-regs-only -c src/kernel/presentation/presentation.c -o build/kernel/presentation.o -D__TARGET_QEMU__
 aarch64-linux-gnu-gcc -std=c99 -ffreestanding -mgeneral-regs-only -c src/kernel/keyboard.c -o build/kernel/keyboard.o -D__TARGET_QEMU__
 
 echo "[DEBUG] Compiling GPU"
@@ -62,6 +63,7 @@ aarch64-linux-gnu-ld -nostdlib -T src/kernel/link.lds \
     build/kernel/file.o \
     build/kernel/process.o \
     build/kernel/syscall.o \
+    build/kernel/presentation.o \
     build/kernel/lib.o \
     build/kernel/keyboard.o \
     build/kernel/gpu/delays.o \
